@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: root
+Build-Jdk: 11.0.11
+Implementation-Title: my-test-app
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: org.test
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/my-test-app
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: hello.Application
+Spring-Boot-Version: 2.0.3.RELEASE
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+
