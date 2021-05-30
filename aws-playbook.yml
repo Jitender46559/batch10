@@ -2,16 +2,24 @@
   hosts: all
   become: true
   tasks:
+  - name: install pip
+    apt:
+      pkg: python-pip
+      state: present
+
+  - name: install boto
+    command: pip install boto boto3
+
   - name: launching AWS instance using Ansible
-    ec2:
-      key_name: aws_instance_Ansible
+    amazon.aws.ec2:
+      key_name: Security
       instance_type: t2.micro
-      image: ami-04bde106886a53080
-      region: ap-south-1
+      image: ami-0747bdcabd34c712a
+      region: us-east-1
       wait: yes
-      group: Ansible
+      group: default
       count: 1
-      vpc_subnet_id: default
+      vpc_subnet_id: subnet-823d708d
       assign_public_ip: yes
-      aws_access_key: ${aws_access_key}
-      aws_secret_key: ${aws_secret_key}
+      aws_access_key: AKIAWZ4IXG5X3X3YSKO5
+      aws_secret_key: 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
