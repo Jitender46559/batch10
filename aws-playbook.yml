@@ -1,5 +1,5 @@
 - name: Ansible AWS Deployment
-  hosts: all
+  hosts: localhost
   become: true
   tasks:
   - name: install pip
